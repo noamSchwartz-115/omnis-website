@@ -16,7 +16,25 @@ body {
   font: 17px/1.6 "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   overflow-x: hidden;
 }
-img { display: block; max-width: 100%; }
+img { display: block; max-width: 100%; height: auto; }
+
+/* Keyboard users can jump straight past the header; it appears only when focused. */
+.skip {
+  position: absolute; left: 16px; top: -60px; z-index: 100;
+  background: var(--ink); color: #14123a; padding: 10px 16px; border-radius: 10px; font-weight: 600; text-decoration: none;
+  transition: top 0.15s ease;
+}
+.skip:focus { top: 12px; }
+/* Text for screen readers only. */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+/* A clear focus ring on every link and button when navigating by keyboard. */
+a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; border-radius: 6px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+/* Windows high-contrast mode drops backgrounds, so the gradient word needs a real colour there. */
+@media (forced-colors: active) {
+  .hero h1 span { background: none; color: CanvasText; -webkit-text-fill-color: CanvasText; }
+  .btn { border: 1px solid ButtonText; }
+}
 a { color: var(--cyan); }
 h1, h2, h3 { font-family: "Sora", sans-serif; line-height: 1.1; letter-spacing: -0.02em; margin: 0; }
 
