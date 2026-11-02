@@ -27,6 +27,7 @@ h1, h2, h3 { font-family: "Sora", sans-serif; line-height: 1.1; letter-spacing: 
 .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font: 600 17px "Sora", sans-serif; }
 .brand img { height: 24px; }
+.brand .by { font: 400 14px "DM Sans", sans-serif; color: var(--muted); margin-left: -4px; }
 .top nav a { color: var(--muted); text-decoration: none; margin-left: 22px; font-size: 15px; }
 .top nav a:hover { color: var(--ink); }
 
@@ -113,7 +114,13 @@ h1, h2, h3 { font-family: "Sora", sans-serif; line-height: 1.1; letter-spacing: 
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 .phone img { border-radius: 37px; width: 100%; }
-.hero .phone { transform: rotate(3deg); }
+/* The hero phone hovers, rising and settling like it's floating above the mountains. */
+.hero .phone { transform: rotate(3deg); animation: levitate 6s ease-in-out infinite; }
+@keyframes levitate {
+  0%, 100% { transform: translateY(0) rotate(3deg); box-shadow: 0 40px 80px rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.12); }
+  50% { transform: translateY(-18px) rotate(2deg); box-shadow: 0 60px 90px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.12); }
+}
+@media (prefers-reduced-motion: reduce) { .hero .phone { animation: none; } }
 
 /* The land: far mountains behind, forest in front, fading into the page */
 .land { position: relative; height: 460px; margin-top: -150px; z-index: 2; pointer-events: none; }
@@ -198,5 +205,6 @@ footer a { color: var(--muted); }
 @media (max-width: 520px) {
   .brand { font-size: 15px; }
   .top nav a { margin-left: 14px; font-size: 14px; }
-  .top nav a[href="#features"] { display: none; }
+  .top nav a[href="#features"], .top nav a[href$="#contact"] { display: none; }
+  .brand .by { font-size: 12px; white-space: nowrap; }
 }
