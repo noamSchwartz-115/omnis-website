@@ -5,7 +5,8 @@
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   var targets = document.querySelectorAll(
-    '.feature .phone, .feature-grid > div:not(.phone), .band .wrap > div, .closing > *'
+    '.feature .phone, .feature-grid > div:not(.phone), .band .wrap > div, .closing > *, ' +
+    '.gallery-head, .world, .theme'
   );
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
@@ -18,7 +19,7 @@
   targets.forEach(function (el) {
     // Things side by side arrive one after another rather than all at once.
     var siblings = Array.prototype.indexOf.call(el.parentNode.children, el);
-    el.style.transitionDelay = (siblings * 0.12) + 's';
+    el.style.transitionDelay = (Math.min(siblings, 6) * 0.08) + 's';
     el.classList.add('reveal');
     observer.observe(el);
   });
