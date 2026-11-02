@@ -6,7 +6,7 @@
 
   var targets = document.querySelectorAll(
     '.feature .phone, .feature-grid > div:not(.phone), .band .wrap > div, .closing > *, ' +
-    '.gallery-head, .world, .theme'
+    '.gallery-head, .classic-head, .world, .theme'
   );
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {

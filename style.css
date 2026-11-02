@@ -181,6 +181,9 @@ section.gallery { padding: 90px 0; }
 /* Rows stay centred, so a group that doesn't fill the last row still looks balanced. */
 .themes { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; max-width: 900px; margin: 0 auto; }
 .theme { width: 160px; }
+.classic-head { text-align: center; margin: 56px auto 22px; }
+.classic-head h3 { font-size: 24px; margin-bottom: 6px; }
+.classic-head p { color: var(--muted); margin: 0; }
 .theme strong { display: block; margin-top: 10px; font: 600 15px "Sora", sans-serif; }
 .theme span { display: block; color: var(--muted); font-size: 13px; line-height: 1.4; }
 /* A tiny running-session screen painted in the theme's own colours. */
