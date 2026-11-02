@@ -115,13 +115,21 @@ h1, h2, h3 { font-family: "Sora", sans-serif; line-height: 1.1; letter-spacing: 
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 .phone img { border-radius: 37px; width: 100%; }
+/* Every phone gives off a soft cyan-and-violet glow that slowly breathes. */
+.phone { animation: phone-glow 5s ease-in-out infinite; }
+@keyframes phone-glow {
+  0%, 100% { filter: drop-shadow(0 0 16px rgba(95, 225, 255, 0.16)) drop-shadow(0 0 44px rgba(169, 139, 255, 0.12)); }
+  50% { filter: drop-shadow(0 0 26px rgba(95, 225, 255, 0.34)) drop-shadow(0 0 72px rgba(169, 139, 255, 0.26)); }
+}
 /* The hero phone hovers, rising and settling like it's floating above the mountains. */
-.hero .phone { transform: rotate(3deg); animation: levitate 6s ease-in-out infinite; }
+.hero .phone { transform: rotate(3deg); animation: levitate 6s ease-in-out infinite, phone-glow 5s ease-in-out infinite; }
 @keyframes levitate {
   0%, 100% { transform: translateY(0) rotate(3deg); box-shadow: 0 40px 80px rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.12); }
   50% { transform: translateY(-18px) rotate(2deg); box-shadow: 0 60px 90px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.12); }
 }
-@media (prefers-reduced-motion: reduce) { .hero .phone { animation: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .phone, .hero .phone { animation: none; filter: drop-shadow(0 0 22px rgba(95, 225, 255, 0.25)) drop-shadow(0 0 56px rgba(169, 139, 255, 0.18)); }
+}
 
 /* The land: far mountains behind, forest in front, fading into the page */
 .land { position: relative; height: 460px; margin-top: -150px; z-index: 2; pointer-events: none; }
