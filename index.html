@@ -3,47 +3,110 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Omnis by StratumInteractive</title>
-  <meta name="description" content="Omnis is a focus and digital wellbeing app for Android: block distracting apps and sites, build a streak, and take time offline.">
+  <title>Omnis: focus, made into a climb</title>
+  <meta name="description" content="Omnis is a focus and digital wellbeing app for Android by StratumInteractive. Block distracting apps and sites, keep your streak crystal lit, and climb through new worlds.">
   <link rel="icon" href="omnis-mark.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&family=Sora:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrap">
-    <header class="top">
+  <header class="top">
+    <div class="wrap">
       <a class="brand" href="index.html"><img src="omnis-mark.png" alt="">StratumInteractive</a>
-      <nav><a href="privacy.html">Privacy</a><a href="#contact">Contact</a></nav>
-    </header>
+      <nav><a href="#features">Features</a><a href="privacy.html">Privacy</a><a href="#contact">Contact</a></nav>
+    </div>
+  </header>
 
-    <main>
-      <div class="hero">
-        <img src="omnis-mark.png" alt="Omnis logo">
-        <h1>Omnis</h1>
-        <p>Focus on what matters. Block distracting apps and sites, build a daily streak, and make room for time offline.</p>
+  <main>
+    <section class="hero">
+      <div class="stars"></div>
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Omnis for Android</div>
+          <h1>Focus, made into a <span>climb.</span></h1>
+          <p class="lead">Block the apps and sites that pull you away, keep your streak crystal lit, and rise through new worlds one session at a time.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#contact"><span class="stack"><small>Coming soon to</small>Google Play</span></a>
+            <a class="btn btn-ghost" href="#features">See how it works</a>
+          </div>
+        </div>
+        <div class="phone"><img src="img/screen-welcome.jpg" alt="Omnis welcome screen: a glowing streak crystal above snowy mountains, Day 4, goal done"></div>
       </div>
-
-      <div class="cards">
-        <div class="card"><h3>Focus sessions</h3><p>Start a session and the apps and websites on your blocklists stay closed until it ends.</p></div>
-        <div class="card"><h3>Schedules</h3><p>Block automatically during work hours, study time or the evening.</p></div>
-        <div class="card"><h3>Streaks and ranks</h3><p>Meet a daily goal, keep your streak alive and climb through new worlds.</p></div>
-        <div class="card"><h3>Wellbeing</h3><p>Short breathing resets, morning and evening rituals, and time offline.</p></div>
+      <div class="land" aria-hidden="true">
+        <img class="far" src="img/mountains-far.png" alt="">
+        <img class="mid" src="img/mountains-mid.png" alt="">
       </div>
+    </section>
 
-      <section>
-        <h2>Private by design</h2>
-        <p>Omnis has no account, no ads and no analytics. Your blocklists, sessions and stats stay on your phone. Read the <a href="privacy.html">privacy policy</a>.</p>
-      </section>
+    <section class="feature" id="features">
+      <div class="wrap feature-grid">
+        <div class="phone"><img src="img/screen-session.jpg" alt="Omnis session screen with blocklist, duration and break options" loading="lazy"></div>
+        <div>
+          <div class="eyebrow">Focus sessions</div>
+          <h2>Silence the noise in one tap.</h2>
+          <p>Pick a blocklist and a length, and the apps and websites on it stay shut until the session ends.</p>
+          <ul class="ticks">
+            <li>Blocks apps and websites, right on your phone</li>
+            <li>Schedules for work hours, study time or evenings</li>
+            <li>Locked mode for when willpower needs backup</li>
+            <li>A live countdown in your notifications</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>Questions, feedback or support: <a href="mailto:noamrob1150@gmail.com">noamrob1150@gmail.com</a></p>
-      </section>
-    </main>
+    <section class="feature">
+      <div class="wrap feature-grid flip">
+        <div class="crystal-stage"><img src="img/crystal.png" alt="The Omnis streak crystal" loading="lazy"></div>
+        <div>
+          <div class="eyebrow">Streaks</div>
+          <h2>Keep the crystal lit.</h2>
+          <p>Set a daily goal. Every day you reach it, your streak grows and your crystal shines brighter.</p>
+          <p>Miss a day? A streak freeze can cover it.</p>
+        </div>
+      </div>
+    </section>
 
-    <footer>© 2026 StratumInteractive · <a href="privacy.html">Privacy policy</a></footer>
-  </div>
+    <section class="feature">
+      <div class="wrap feature-grid">
+        <div class="ranks">
+          <figure><img src="img/rank-beginner_1.png" alt="" loading="lazy"><figcaption>Beginner</figcaption></figure>
+          <figure><img src="img/rank-disciple.png" alt="" loading="lazy"><figcaption>Disciple</figcaption></figure>
+          <figure><img src="img/rank-adept.png" alt="" loading="lazy"><figcaption>Adept</figcaption></figure>
+          <figure><img src="img/rank-master.png" alt="" loading="lazy"><figcaption>Master</figcaption></figure>
+          <figure><img src="img/rank-zen.png" alt="" loading="lazy"><figcaption>Zen</figcaption></figure>
+          <figure><img src="img/rank-omnipresent.png" alt="" loading="lazy"><figcaption>Omnipresent</figcaption></figure>
+        </div>
+        <div>
+          <div class="eyebrow">Ranks and worlds</div>
+          <h2>Every minute takes you higher.</h2>
+          <p>Focused minutes earn XP. Climb from Beginner to Omnipresent and unlock new lands behind you: forests, mountains, crystal caves and the cosmos.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="band">
+      <div class="wrap">
+        <div><h3>Wellbeing built in</h3><p>Breathing resets with a singing bowl, morning and evening rituals, and planned time offline.</p></div>
+        <div><h3>Guided meditation</h3><p>Short spoken meditations, or quiet ones paced by a breathing circle.</p></div>
+        <div><h3>Private by design</h3><p>No account, no ads, no analytics. Your data stays on your phone. <a href="privacy.html">Privacy policy</a></p></div>
+      </div>
+    </div>
+
+    <section class="closing" id="contact">
+      <h2>Omnis is almost here.</h2>
+      <p>Omnis is coming to Google Play. Questions, feedback or support? Get in touch.</p>
+      <div class="cta"><a class="btn btn-primary" href="mailto:noamrob1150@gmail.com">noamrob1150@gmail.com</a></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 StratumInteractive</span>
+      <span><a href="privacy.html">Privacy policy</a> · <a href="mailto:noamrob1150@gmail.com">Contact</a></span>
+    </div>
+  </footer>
 </body>
 </html>
